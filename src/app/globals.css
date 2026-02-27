@@ -1,0 +1,50 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --bg: #0B0F14;
+    --text: #F5F7FA;
+    --text-muted: #A7B0BE;
+    --surface: #111827;
+    --border: rgba(255, 255, 255, 0.10);
+    --accent: #D6B25E;
+    --accent-hover: #E6C97A;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    background-color: var(--bg);
+    color: var(--text);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    html {
+      scroll-behavior: auto;
+    }
+    *,
+    *::before,
+    *::after {
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.01ms !important;
+    }
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .animate-float {
+    animation: none !important;
+  }
+}
+
+/* Safe area para dispositivos con notch/barra de gestos */
+.safe-area-pb {
+  padding-bottom: env(safe-area-inset-bottom, 0);
+}
