@@ -67,7 +67,7 @@ export function ProductQuoteModal({ product, onClose }: ProductQuoteModalProps) 
               value={measure}
               onChange={(e) => setMeasure(e.target.value)}
               placeholder="Ej: 1.90m x 1.20m"
-              className="mt-1 w-full rounded-lg border border-white/10 bg-surface px-3 py-2 text-text-primary placeholder:text-text-secondary focus:border-primary focus:outline-none"
+              className="mt-1 w-full rounded-lg border border-white/10 bg-surface px-3 py-3 text-base text-text-primary placeholder:text-text-secondary focus:border-primary focus:outline-none min-h-[44px]"
               maxLength={100}
             />
           </label>
@@ -78,7 +78,7 @@ export function ProductQuoteModal({ product, onClose }: ProductQuoteModalProps) 
               value={color}
               onChange={(e) => setColor(e.target.value)}
               placeholder="Ej: Gris oscuro"
-              className="mt-1 w-full rounded-lg border border-white/10 bg-surface px-3 py-2 text-text-primary placeholder:text-text-secondary focus:border-primary focus:outline-none"
+              className="mt-1 w-full rounded-lg border border-white/10 bg-surface px-3 py-3 text-base text-text-primary placeholder:text-text-secondary focus:border-primary focus:outline-none min-h-[44px]"
               maxLength={80}
             />
           </label>
@@ -89,7 +89,7 @@ export function ProductQuoteModal({ product, onClose }: ProductQuoteModalProps) 
               value={city}
               onChange={(e) => setCity(e.target.value)}
               placeholder="Ej: Cúcuta"
-              className="mt-1 w-full rounded-lg border border-white/10 bg-surface px-3 py-2 text-text-primary placeholder:text-text-secondary focus:border-primary focus:outline-none"
+              className="mt-1 w-full rounded-lg border border-white/10 bg-surface px-3 py-3 text-base text-text-primary placeholder:text-text-secondary focus:border-primary focus:outline-none min-h-[44px]"
               maxLength={60}
             />
           </label>
@@ -100,23 +100,23 @@ export function ProductQuoteModal({ product, onClose }: ProductQuoteModalProps) 
               value={date}
               onChange={(e) => setDate(e.target.value)}
               placeholder="Ej: próxima semana"
-              className="mt-1 w-full rounded-lg border border-white/10 bg-surface px-3 py-2 text-text-primary placeholder:text-text-secondary focus:border-primary focus:outline-none"
+              className="mt-1 w-full rounded-lg border border-white/10 bg-surface px-3 py-3 text-base text-text-primary placeholder:text-text-secondary focus:border-primary focus:outline-none min-h-[44px]"
               maxLength={60}
             />
           </label>
         </div>
-        <div className="flex gap-3 pt-4">
+        <div className="flex flex-col sm:flex-row gap-3 pt-4">
           <button
             type="button"
             onClick={handleAdd}
-            className="flex-1 border border-primary text-primary py-3 rounded-lg font-medium hover:bg-primary/10"
+            className="flex-1 border border-primary text-primary py-3 min-h-[44px] rounded-lg font-medium hover:bg-primary/10 touch-manipulation"
           >
             Agregar a cotización
           </button>
           <button
             type="button"
             onClick={handleAddAndSend}
-            className="flex-1 bg-primary hover:bg-primary-hover text-[#0B0F14] py-3 rounded-lg font-medium"
+            className="flex-1 bg-primary hover:bg-primary-hover text-[#0B0F14] py-3 min-h-[44px] rounded-lg font-medium touch-manipulation"
           >
             Enviar por WhatsApp
           </button>

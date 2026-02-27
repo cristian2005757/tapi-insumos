@@ -63,14 +63,14 @@ export function Navbar() {
           <button
             type="button"
             onClick={() => openWhatsApp()}
-            className="p-2 text-primary"
+            className="p-3 min-w-[44px] min-h-[44px] flex items-center justify-center text-primary touch-manipulation"
             aria-label="Contactar por WhatsApp"
           >
             <WhatsAppIcon />
           </button>
           <button
             onClick={() => setOpen(!open)}
-            className="p-2 text-text-secondary"
+            className="p-3 min-w-[44px] min-h-[44px] flex items-center justify-center text-text-secondary touch-manipulation"
             aria-expanded={open}
             aria-controls="mobile-menu"
             aria-label={open ? 'Cerrar menú' : 'Abrir menú'}

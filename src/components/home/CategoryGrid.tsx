@@ -28,7 +28,7 @@ export function CategoryGrid() {
             <Link
               key={cat.id}
               href={`/catalogo?categoria=${cat.id}`}
-              className={`group block p-6 rounded-2xl border border-white/10 bg-surface hover:border-primary/50 hover:shadow-lg hover:shadow-primary/10 transition-all duration-300 active:scale-[0.98] ${
+              className={`group block p-4 sm:p-6 rounded-2xl border border-white/10 bg-surface hover:border-primary/50 hover:shadow-lg hover:shadow-primary/10 transition-all duration-300 active:scale-[0.98] touch-manipulation ${
                 isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'
               }`}
               style={{ transitionDelay: `${100 + i * 50}ms` }}

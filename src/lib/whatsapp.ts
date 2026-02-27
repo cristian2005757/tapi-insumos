@@ -2,7 +2,18 @@ import type { Product } from '@/types/product'
 import type { QuoteItem } from '@/types/product'
 import { site } from '@/data/site'
 
-const WHATSAPP_NUMBER = process.env.NEXT_PUBLIC_WHATSAPP_NUMBER || ''
+export function getWhatsAppNumber(): string {
+  const env = process.env.NEXT_PUBLIC_WHATSAPP_NUMBER?.trim()
+  if (env) return env
+  return site.whatsapp || ''
+}
+
+export function getWhatsAppUrl(product?: Product, quoteItems?: QuoteItem[]): string {
+  const number = getWhatsAppNumber()
+  if (!number) return '#'
+  const message = encodeURIComponent(buildWhatsAppMessage(product, quoteItems))
+  return `https://wa.me/${number}?text=${message}`
+}
 
 export function buildWhatsAppMessage(
   product?: Product,
@@ -27,8 +38,14 @@ export function buildWhatsAppMessage(
 }
 
 export function openWhatsApp(product?: Product, quoteItems?: QuoteItem[]) {
-  if (!WHATSAPP_NUMBER) return
-  const message = encodeURIComponent(buildWhatsAppMessage(product, quoteItems))
-  const url = `https://wa.me/${WHATSAPP_NUMBER}?text=${message}`
-  window.open(url, '_blank', 'noopener,noreferrer')
+  const url = getWhatsAppUrl(product, quoteItems)
+  if (url === '#') return
+  // Usar enlace nativo en lugar de window.open: más fiable en móviles y con bloqueadores
+  const link = document.createElement('a')
+  link.href = url
+  link.target = '_blank'
+  link.rel = 'noopener noreferrer'
+  document.body.appendChild(link)
+  link.click()
+  document.body.removeChild(link)
 }

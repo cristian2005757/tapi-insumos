@@ -45,14 +45,14 @@ export function Hero() {
         <div className="flex flex-wrap gap-4 mb-12">
           <button
             onClick={() => openWhatsApp()}
-            className="bg-primary hover:bg-primary-hover active:scale-[0.98] text-[#0B0F14] px-8 py-4 rounded-xl font-semibold transition-all shadow-lg"
+            className="bg-primary hover:bg-primary-hover active:scale-[0.98] text-[#0B0F14] px-8 py-4 min-h-[44px] rounded-xl font-semibold transition-all shadow-lg touch-manipulation"
             aria-label="Cotizar por WhatsApp"
           >
             Cotizar por WhatsApp
           </button>
           <Link
             href="/catalogo"
-            className="inline-flex items-center justify-center border-2 border-primary text-primary hover:bg-primary/10 px-8 py-4 rounded-xl font-semibold transition-colors active:scale-[0.98]"
+            className="inline-flex items-center justify-center border-2 border-primary text-primary hover:bg-primary/10 px-8 py-4 min-h-[44px] rounded-xl font-semibold transition-colors active:scale-[0.98] touch-manipulation"
           >
             Ver catálogo
           </Link>

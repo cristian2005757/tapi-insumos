@@ -34,7 +34,7 @@ export function FAQ() {
             >
               <button
                 onClick={() => setOpenId(openId === faq.id ? null : faq.id)}
-                className="w-full px-6 py-4 text-left font-semibold flex justify-between items-center hover:bg-white/5 transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-primary text-text-primary"
+                className="w-full px-6 py-4 min-h-[48px] text-left font-semibold flex justify-between items-center hover:bg-white/5 transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-primary text-text-primary touch-manipulation"
                 aria-expanded={openId === faq.id}
                 aria-controls={`faq-${faq.id}`}
                 id={`faq-btn-${faq.id}`}
@@ -52,8 +52,8 @@ export function FAQ() {
                 id={`faq-${faq.id}`}
                 role="region"
                 aria-labelledby={`faq-btn-${faq.id}`}
-                className={`overflow-hidden transition-all duration-300 ${
-                  openId === faq.id ? 'max-h-48' : 'max-h-0'
+                className={`overflow-y-auto transition-all duration-300 ${
+                  openId === faq.id ? 'max-h-64 md:max-h-48' : 'max-h-0'
                 }`}
               >
                 <p className="px-6 pb-4 text-text-secondary">{faq.answer}</p>

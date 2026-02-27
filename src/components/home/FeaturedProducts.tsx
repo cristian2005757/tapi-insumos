@@ -68,7 +68,7 @@ export function FeaturedProducts() {
             <div className="text-center mt-8">
               <Link
                 href="/catalogo"
-                className="text-primary font-semibold hover:underline"
+                className="inline-block py-3 px-6 text-primary font-semibold hover:underline min-h-[44px] touch-manipulation"
               >
                 Ver todos los productos →
               </Link>

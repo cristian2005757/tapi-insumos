@@ -37,7 +37,7 @@ export function PromoBanner() {
                 </p>
                 <button
                   onClick={() => openWhatsApp()}
-                  className="bg-primary hover:bg-primary-hover text-[#0B0F14] px-8 py-4 rounded-xl font-semibold transition-colors active:scale-[0.98]"
+                  className="bg-primary hover:bg-primary-hover text-[#0B0F14] px-8 py-4 min-h-[44px] rounded-xl font-semibold transition-colors active:scale-[0.98] touch-manipulation"
                   aria-label="Cotizar comedor - WhatsApp"
                 >
                   Cotizar comedor

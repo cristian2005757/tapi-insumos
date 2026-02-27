@@ -1,10 +1,10 @@
 import Link from 'next/link'
 import Image from 'next/image'
 import { site } from '@/data/site'
-
-const whatsappNumber = process.env.NEXT_PUBLIC_WHATSAPP_NUMBER || ''
+import { getWhatsAppNumber } from '@/lib/whatsapp'
 
 export function Footer() {
+  const whatsappNumber = getWhatsAppNumber()
   return (
     <footer className="bg-surface border-t border-white/10 text-text-secondary pb-20 md:pb-0 safe-area-pb">
       <div className="container mx-auto px-4 py-16">
@@ -41,17 +41,17 @@ export function Footer() {
             <h3 className="font-bold text-text-primary text-lg mb-4">Enlaces</h3>
             <ul className="space-y-2">
               <li>
-                <Link href="/" className="hover:text-text-primary transition-colors">
+                <Link href="/" className="block py-2 min-h-[44px] flex items-center hover:text-text-primary transition-colors touch-manipulation">
                   Inicio
                 </Link>
               </li>
               <li>
-                <Link href="/catalogo" className="hover:text-text-primary transition-colors">
+                <Link href="/catalogo" className="block py-2 min-h-[44px] flex items-center hover:text-text-primary transition-colors touch-manipulation">
                   Catálogo
                 </Link>
               </li>
               <li>
-                <a href="/#faq" className="hover:text-text-primary transition-colors">
+                <a href="/#faq" className="block py-2 min-h-[44px] flex items-center hover:text-text-primary transition-colors touch-manipulation">
                   Preguntas
                 </a>
               </li>

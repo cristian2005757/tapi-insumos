@@ -1,6 +1,7 @@
 import { site } from '@/data/site'
+import { getWhatsAppNumber } from '@/lib/whatsapp'
 
-const whatsapp = process.env.NEXT_PUBLIC_WHATSAPP_NUMBER || ''
+const whatsapp = getWhatsAppNumber()
 const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://tapinsumos.com'
 
 export function JsonLd() {

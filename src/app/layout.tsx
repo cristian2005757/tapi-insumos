@@ -8,6 +8,12 @@ import { BottomBar } from '@/components/layout/BottomBar'
 import { JsonLd } from '@/components/layout/JsonLd'
 import { site } from '@/data/site'
 
+export const viewport = {
+  width: 'device-width',
+  initialScale: 1,
+  maximumScale: 5,
+}
+
 export const metadata: Metadata = {
   title: {
     default: `${site.name} | Muebles modernos`,

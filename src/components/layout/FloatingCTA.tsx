@@ -35,7 +35,7 @@ export function FloatingCTA() {
   return (
     <button
       onClick={handleClick}
-      className={`fixed bottom-20 md:bottom-6 right-6 z-50 bg-primary hover:bg-primary-hover text-[#0B0F14] p-4 rounded-full shadow-lg transition-all duration-300 ${
+      className={`fixed bottom-24 md:bottom-6 right-6 z-50 bg-primary hover:bg-primary-hover text-[#0B0F14] p-4 min-w-[48px] min-h-[48px] flex items-center justify-center rounded-full shadow-lg transition-all duration-300 ${
         reducedMotion ? '' : 'animate-float hover:scale-110'
       }`}
       aria-label={

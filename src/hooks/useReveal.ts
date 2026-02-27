@@ -14,7 +14,11 @@ export function useReveal(threshold = 0.1) {
       ([entry]) => {
         if (entry.isIntersecting) setIsVisible(true)
       },
-      { threshold }
+      {
+        threshold,
+        // En móviles el observer a veces no dispara; rootMargin hace que se active antes
+        rootMargin: '0px 0px 150px 0px',
+      }
     )
 
     observer.observe(el)
