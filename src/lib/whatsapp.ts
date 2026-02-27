@@ -34,7 +34,7 @@ export function buildWhatsAppMessage(
   if (product) {
     return base + `Me interesa el producto: ${product.name}. ¿Podrían darme más información?`
   }
-  return base + 'Me gustaría recibir información sobre sus productos.'
+  return `Hola, me interesé en el catálogo de ${site.name}. ¿Podrían darme más información?`
 }
 
 export function openWhatsApp(product?: Product, quoteItems?: QuoteItem[]) {
