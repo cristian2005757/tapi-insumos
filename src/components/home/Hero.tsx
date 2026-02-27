@@ -39,7 +39,7 @@ export function Hero() {
         </h1>
         <p className="text-lg md:text-xl text-text-secondary max-w-2xl mb-8">
           Camas, cabeceros y salas con acabados premium. Personaliza medidas y
-          color. Entrega rápida.
+          color. Entrega a tiempo.
         </p>
 
         <div className="flex flex-wrap gap-4 mb-12">
