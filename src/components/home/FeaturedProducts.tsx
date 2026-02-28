@@ -7,7 +7,7 @@ import { ProductCard } from '@/components/product/ProductCard'
 import { useReveal } from '@/hooks/useReveal'
 
 export function FeaturedProducts() {
-  const { ref, isVisible } = useReveal(0.1)
+  const { ref, isVisible } = useReveal({ threshold: 0.1, instantOnMobile: true })
   const hasProducts = products.length > 0
 
   return (
